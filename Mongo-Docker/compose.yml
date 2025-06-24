@@ -1,0 +1,21 @@
+services:
+  mongodb:
+    image: mongodb/mongodb-community-server:latest  # Use the official MongoDB Community Server image
+    container_name: mongodb  # Name the container for easy reference
+    restart: always  # Automatically restart the container on failure
+    ports:
+      - "27017:27017"  # Map host port 27017 to container port 27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongo  # Set root username for MongoDB
+      - MONGO_INITDB_ROOT_PASSWORD=12345  # Set root password for MongoDB
+    volumes:
+      - mongodb_data:/data/db  # Use a named volume for persistent database storage
+    networks:
+      - mongo_network  # Attach to a custom network for isolation
+
+volumes:
+  mongodb_data:  # Declare the named volume for MongoDB data
+
+networks:
+  mongo_network:  # Define a custom network for the MongoDB service
+    driver: bridge
