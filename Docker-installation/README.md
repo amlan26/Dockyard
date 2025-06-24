@@ -20,7 +20,7 @@ This guide provides step-by-step instructions to install Docker on a Linux syste
 sudo curl -fsSL https://get.docker.com -o get-docker.sh
 
 
-2. Execute the Installation Script
+### 2. Execute the Installation Script
 
 ```bash
 sudo sh get-docker.sh
