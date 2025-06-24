@@ -20,7 +20,7 @@ This project provides a Docker-based setup to run a MongoDB Community Server usi
 
 ```
 .
-├── docker-compose.yml
+├── compose.yml
 └── README.md
 ```
 
